@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface TenantRepository extends JpaRepository<Tenant, Long> {
 
     // Find by associated user account
-    Optional<Tenant> findByTenant(Tenant tenant);
+    Optional<Tenant> findByUser(User user);
 
     // Find by email through the User relationship
     Optional<Tenant> findByUserEmail(String email);
